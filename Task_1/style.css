@@ -1,0 +1,53 @@
+.navbar {
+    background-color: black;
+    height: 80px;
+    display: flex;
+    align-items: center;   
+    padding-left: 20px;
+}
+
+
+.myButton{
+   color: white;
+   margin: 20px;
+}
+.navbar a,
+.dropbtn {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+.dropdown {
+    position: relative;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+}
+
+
+.dropdown-content a {
+    color: black;
+    padding: 10px;
+    display: block;
+}
+
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

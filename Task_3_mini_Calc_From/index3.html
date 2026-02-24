@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Radio Calculator</title>
+
+   <script>
+      function calc() {
+         var a = myform.text1.value;
+         var b = myform.text2.value;
+         var c = a + b;
+         if (myform.Add.checked) {
+            c = parseInt(a) + parseInt(b);
+            myform.result.value = c;
+         }
+         else if (myform.Sub.checked) {
+            c = parseInt(a) - parseInt(b);
+            myform.result.value = c;
+         }
+         else if (myform.Mul.checked) {
+            c = parseInt(a) * parseInt(b);
+            myform.result.value = c;
+         }
+         else if (myform.Div.checked) {
+            if (parseInt(b) == 0) {
+               c = "Can't divide by 0";
+               myform.result.value = c;
+            }
+            else {
+               c = parseInt(a) / parseInt(b);
+               myform.result.value = c;
+            }
+         }
+
+         else {
+            c = "Select Valid Operator";
+            myform.result.value = c;
+         }
+      }
+   </script>
+</head>
+
+<body>
+   <h1>Calculator Using Form Tag</h1>
+   <form id="myform">
+      Enter number a: <input type="text" name="text1" />
+      <br />
+      Enter number b: <input type="text" name="text2" />
+      <br />
+      Select Operation:
+      <br />
+      <input type="radio" id="Add" class="calculator">Addition
+      <br />
+      <input type="radio" id="Sub" class="calculator">Substraction
+      <br />
+      <input type="radio" id="Mul" class="calculator">Multiplication
+      <br />
+      <input type="radio" id="Div" class="calculator">Division
+      <br />
+      <button type="submit" value="Submit" onclick="calc()">Enter</button>
+      <br />
+      <br />
+      Result
+      <input type="text" id="result" />
+
+   </form>
+
+
+</body>
+
+</html>

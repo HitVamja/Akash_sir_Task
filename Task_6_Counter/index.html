@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Counter</title>
+   <style>
+      h1 {
+         display: flex;
+         justify-content: center;
+      }
+   </style>
+   <script>
+      let value = 0;
+      function Increment() {
+         if (value < 0) {
+            alert("Value is already Zero !!!")
+         } else {
+            value++;
+            document.getElementById("count").innerText = `Total Count is : ${value}`
+            localStorage.setItem("Value", value);
+         }
+
+      }
+
+      function Decrement() {
+         if (value <= 0) {
+            alert("Value is already Zero !!!")
+         } else {
+            value--;
+            document.getElementById("count").innerText = `Total Count is : ${value}`
+            localStorage.setItem("Value", value);
+         }
+      }
+
+   </script>
+</head>
+
+<body>
+   <h1>Counter</h1>
+   <h2 id="count">Total Count is : 0</h2>
+   <div class="btn">
+      <button type="button" value="Increment" onclick="Increment()">Increment</button>
+      <button type="button" value="Decrement" onclick="Decrement()">Decrement</button>
+   </div>
+</body>
+
+</html>
